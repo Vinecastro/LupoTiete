@@ -1,0 +1,139 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7faff; /* Azul muito claro */
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column; /* empilha logo e texto verticalmente */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  top: 0;
+  z-index: 100;
+}
+
+header .id {
+  margin-top: -20px; /* espaçamento entre logo e texto */
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+header img {
+  height: 150px; /* mantém o tamanho desejado */
+}
+
+/* Seções */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos das seções */
+section h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Produtos */
+.produtos-container {
+  display: flex;
+  flex-direction: column; /* Um card embaixo do outro */
+  gap: 20px; /* Espaço entre os cards */
+  max-width: 600px; /* Opcional: limita a largura */
+  margin: 0 auto; /* Centraliza os cards na página */
+}
+
+.produto-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #000000; /* Borda preta */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.produto-card h3 {
+  font-size: 20px;
+  color: #000000; /* Título preto */
+  margin-bottom: 10px;
+}
+
+.produto-card p {
+  font-size: 14px;
+  color: #000000; /* Texto preto */
+}
+
+.produto-card {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Sobre a marca */
+#sobre p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+/* Contato */
+#contato p, #contato a {
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#contato a:hover {
+  color: #1a73e8;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsividade */
+@media(max-width: 768px){
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+}
